@@ -1,8 +1,5 @@
-"use client";
-
-import React, { forwardRef } from "react";
-import logo_s from "../../../../public/fixed_image_180.png";
-import "./index.css";
+import logo_s from '/public/fixed_image_180.png'
+import './index.css'
 
 const Features = () => {
   return (
@@ -59,7 +56,7 @@ const Features = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

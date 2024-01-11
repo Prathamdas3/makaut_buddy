@@ -1,12 +1,9 @@
-"use client";
-import React from "react";
-
 export default function Stat() {
   const stats = [
-    { label: "Previous Year Questions", value: "25+" },
-    { label: "Quality Video Tutorials", value: "90+" },
-    { label: "Handwritten Notes", value: "15+" },
-  ];
+    { label: 'Previous Year Questions', value: '25+' },
+    { label: 'Quality Video Tutorials', value: '90+' },
+    { label: 'Handwritten Notes', value: '15+' },
+  ]
 
   return (
     <div className=" sm:px-32 bg-[#D9D9D9]">
@@ -21,5 +18,5 @@ export default function Stat() {
         ))}
       </div>
     </div>
-  );
+  )
 }

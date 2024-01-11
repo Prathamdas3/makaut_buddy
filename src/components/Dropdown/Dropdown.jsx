@@ -1,11 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { Select, SelectItem } from '@nextui-org/react';
-import { stream, subject } from './data';
-import DataContext from '@/app/Context/DataContext';
+import { Select, SelectItem } from '@nextui-org/react'
+import { stream, subject } from './data'
+
+import { useApiContextProvider } from '@/Context/DataProvider'
 
 export default function App() {
-  const placement = 'outside';
-  const getData = useContext(DataContext);
+  const placement = 'outside'
+  const { setYear, setSub } = useApiContextProvider()
 
   return (
     <div className="w-full flex flex-col sm:gap-6">
@@ -21,7 +21,7 @@ export default function App() {
               <SelectItem
                 key={stream.value}
                 value={stream.value}
-                onClick={() => getData.setYear(stream.value)}
+                onClick={() => setYear(stream.value)}
               >
                 {stream.label}
               </SelectItem>
@@ -41,7 +41,7 @@ export default function App() {
               <SelectItem
                 key={subject.value}
                 value={subject.value}
-                onClick={() => getData.setSub(subject.value)}
+                onClick={() => setSub(subject.value)}
               >
                 {subject.label}
               </SelectItem>
@@ -50,5 +50,5 @@ export default function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }

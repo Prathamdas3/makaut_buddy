@@ -1,6 +1,4 @@
-"use client";
-import React from "react";
-import { Image } from "@nextui-org/react";
+import { Image } from '@nextui-org/react'
 
 const Notes = ({ data }) => {
   return (
@@ -25,7 +23,7 @@ const Notes = ({ data }) => {
           </div>
         ))}
     </div>
-  );
-};
+  )
+}
 
-export default Notes;
+export default Notes

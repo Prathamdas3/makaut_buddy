@@ -1,25 +1,26 @@
-import "./globals.css";
-import { Inter, Grenze_Gotisch } from "next/font/google";
-import { Providers } from "./providers";
-import { ClerkProvider } from "@clerk/nextjs";
-import DataState from "../app/Context/DataState";
+import './globals.css'
+import { Inter, Grenze_Gotisch } from 'next/font/google'
+import { Providers } from './providers'
+import { ClerkProvider } from '@clerk/nextjs'
+
+import { ContextProvider } from '@/Context/DataProvider'
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 const grenze = Grenze_Gotisch({
-  subsets: ["latin"],
-  variable: "--font-grenze",
-  display: "swap",
-});
+  subsets: ['latin'],
+  variable: '--font-grenze',
+  display: 'swap',
+})
 
 export const metadata = {
-  title: "Makaut Buddy",
+  title: 'Makaut Buddy',
   description: "Student's Buddy",
-};
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -31,11 +32,11 @@ export default function RootLayout({ children }) {
         <ClerkProvider
           publishablekey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
         >
-          <DataState>
+          <ContextProvider>
             <Providers>{children}</Providers>
-          </DataState>
+          </ContextProvider>
         </ClerkProvider>
       </body>
     </html>
-  );
+  )
 }

@@ -1,7 +1,4 @@
-"use client";
-import logo from "../../../../public/Logo_sm.svg";
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -10,8 +7,10 @@ export default function Footer() {
         <div className="sm:flex  sm:divide-x-2 max-sm:divide-y-2 divide-[#FFFFFF10] ">
           <div className="logo sm:pr-10">
             <Image
-              src={logo}
+              src="/Logo_sm.svg"
               className="sm:px-10 h-72 max-sm:pb-5 sm:w-80 sm:h-80 "
+              width={320}
+              height={288}
               alt="Logo"
             />
           </div>
@@ -94,11 +93,11 @@ export default function Footer() {
           Created with love ❤️ by
           <a className="text-white ml-2" href="https://swapnoneel.vercel.app">
             Swapnoneel Saha
-          </a>{" "}
+          </a>{' '}
           ,
           <a className="text-white ml-2" href="">
             Arindam Majumder
-          </a>{" "}
+          </a>{' '}
           and
           <a className="text-white ml-2" href="https://sammaji.pages.dev">
             Samyabrata Maji
@@ -106,5 +105,5 @@ export default function Footer() {
         </p>
       </div>
     </>
-  );
+  )
 }
